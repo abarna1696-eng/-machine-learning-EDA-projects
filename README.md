@@ -4,7 +4,7 @@ Welcome to my Machine Learning Portfolio! This repository showcases projects tha
 
 ---
 
-## 📌 Introduction
+## Introduction
 This portfolio demonstrates my ability to:
 - Perform **data cleaning** and **statistical summarization**.
 - Apply **EDA techniques** to uncover insights.
@@ -13,7 +13,7 @@ This portfolio demonstrates my ability to:
 
 ---
 
-## 📂 Projects
+## Projects
 Here are some featured projects in this repository:
 
 ### 1. Titanic Survival Prediction
@@ -28,10 +28,34 @@ Here are some featured projects in this repository:
 
 ---
 
-## ⚙️ Installation
+## Installation
 To run these projects locally:
 ```bash
 git clone https://github.com/<your-username>/machine-learning-EDA-projects.git
 cd machine-learning-EDA-projects
 pip install -r requirements.txt
 ``
+
+Practical_Application_1/
+  ├── README.md
+  ├── Practical_Application_1.ipynb
+  ├── coupon_data.csv
+
+import pandas as pd
+import seaborn as sns
+import matplotlib.pyplot as plt
+df.info()
+df.describe()
+df.groupby('coupon')['Y'].mean()
+sns.barplot(x='coupon', y='Y', data=df)
+Visualizations:
+plt.title('Acceptance Rate by Coupon Type')
+plt.xlabel('Coupon Type')
+plt.ylabel('Acceptance Rate')
+fig, axes = plt.subplots(1, 2, figsize=(12, 5))
+sns.histplot(df[df['Y']==1]['age'], ax=axes[0])
+sns.histplot(df[df['Y']==0]['age'], ax=axes[1])
+
+
+
+
